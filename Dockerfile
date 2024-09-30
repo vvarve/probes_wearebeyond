@@ -11,13 +11,9 @@ COPY env.sample .env
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Define la variable de entorno que indica el puerto
-ENV PORT 8080
-
-# Expone el puerto que utiliza la aplicación
 EXPOSE 8080
 
 COPY . .
 
-# gunicorn
+CMD ["python", "run.py"]
 # CMD ["gunicorn", "--config", "gunicorn-cfg.py", "run:app"]
