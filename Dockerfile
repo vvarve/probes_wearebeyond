@@ -5,6 +5,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 COPY requirements.txt .
+COPY env.sample .env
 
 # install python dependencies
 RUN pip install --upgrade pip
